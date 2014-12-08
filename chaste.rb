@@ -7,7 +7,6 @@ class Chaste < Formula
   depends_on "xsd"
   depends_on "hdf5189" => "enable-parallel"
   depends_on "boost149"
-  depends_on "wget"
   depends_on "scons"
   depends_on "xerces-c"
   depends_on "petsc"
