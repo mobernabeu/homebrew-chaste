@@ -1,6 +1,6 @@
 require 'formula'
 
-class Hdf5 < Formula
+class Hdf5189 < Formula
   homepage 'http://www.hdfgroup.org/HDF5'
   url 'http://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.9/src/hdf5-1.8.9.tar.bz2'
   sha1 '7d5e5e8caa5970c65e70a5b4ad6787efe0bf70bb'
