@@ -1,7 +1,7 @@
-ChasteHomebrew
+homebrew-chaste
 ==============
 
-Set of Homebrew formulas required to install Chaste
+Set of Homebrew formulas and related files required to install Chaste
 (http://www.cs.ox.ac.uk/chaste) on Mac OS X.
 
 This repo is currently work in progress.
