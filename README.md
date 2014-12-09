@@ -40,3 +40,8 @@ brew install --HEAD chaste.rb -v
   being supported by Chaste. There's no older version of HDF5 in the
   `homebrew-versions` tap, but I started working towards a HDF5 1.8.9
   formula in file `hdf5189.rb`.
+
+### Homebrew cook book and example formula:
+
+* https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Formula-Cookbook.md
+* https://github.com/Homebrew/homebrew/blob/master/Library/Contributions/example-formula.rb
