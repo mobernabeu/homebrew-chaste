@@ -6,7 +6,7 @@ require "formula"
 
 class Chaste < Formula
   homepage "http://www.cs.ox.ac.uk/chaste"
-  # We may wanna swap to the internal SVN server and give the option to check out user projects
+  # TODO: we may wanna swap to the internal SVN server and give the option to check out user projects
   head 'https://github.com/chaste/chaste.git'
   
   depends_on "xsd"
@@ -22,19 +22,20 @@ class Chaste < Formula
 
   patch do
     url "https://raw.githubusercontent.com/mobernabeu/homebrew-chaste/master/macosx.diff"
-    sha1 "ab7f85ffef42024b89e6329416ffecbd493825b5"
+    sha1 "faa28dcb345cd20f1086b24ea23122dd668b57e0"
   end
 
   def install
-    # If you are going to link your application against Chaste, you will need its header files. Copy them
-    # before all the build files are generated within the same folders.
-    include.install "mesh"
-
     # The version of HDF5 provided by Homebrew is not fully supported by Chaste, heart won't compile
-    system "scons cl=1 co=1 mesh -j4"
+    system "scons cl=1 co=1 cell_based -j4"
 
-    # Copy Chaste libraries over
-    lib.install "lib"
+    # If you are going to link your application against Chaste, you will need its header files.
+    # Copy the source code to /usr/local/include/chaste TODO: it would be nicer to cherry pick the 
+    # header files only, rather than dumping everything there.
+    (include/"chaste").install ["cell_based", "io", "mesh", "pde", "global", "linalg", "ode"]
+
+    # Copy Chaste's lib folder as /usr/local/lib/chaste
+    lib.install "lib" => "chaste"
 
   end
 
