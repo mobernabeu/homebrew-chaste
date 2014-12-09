@@ -26,25 +26,17 @@ along with Chaste. If not, see <http://www.gnu.org/licenses/>.
 import os
 
 petsc_ver = 3.5
-petsc_path='/usr/local/Cellar/petsc/3.5.2/'
+petsc_path='/usr/local/Cellar/petsc/3.5.2'
 petsc_build_name = ''
 petsc_build_name_profile = ''
 petsc_build_name_optimized = ''
 
 noccache = "true"
 
-other_includepaths = ['/usr/local/opt/libxsd',
-                      '/usr/local/include/']
-
-other_libpaths = [ '/usr/X11/lib',
-                  '/usr/local/lib/']
-
+other_includepaths = ['/usr/local/include/xsd']
+other_libpaths = []
 blas_lapack = []
 other_libraries = ['boost_serialization-mt', 'boost_filesystem-mt', 'boost_system-mt','xerces-c', 'z', 'hdf5', 'parmetis','metis']
-
-
-ldflags='-framework Accelerate'
-
 
 def Configure(prefs, build):
     """Set up the build configuring.
@@ -58,8 +50,7 @@ def Configure(prefs, build):
     global use_vtk
     use_vtk = True
     if use_vtk:
-        #homebrew installs vtk5 without simlinks
-        other_includepaths.append('/usr/local/opt/vtk5/include/vtk-5.10/')
+        other_includepaths.append('/usr/local/opt/vtk5/include/vtk-5.10')
         other_libpaths.append('/usr/local/opt/vtk5/lib/vtk-5.10')
         other_libraries.extend(['vtkFiltering', 'vtkIO', 'vtkCommon', 'vtksys', 'vtkGraphics'])
 

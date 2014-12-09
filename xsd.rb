@@ -10,8 +10,8 @@ class Xsd < Formula
   def install
     # Copy XSD binary provided by the tarball into /usr/local/bin/xsd
     (bin).install "bin/xsd"
-    # Copy files in libxsd folder of tarball into /usr/local/opt/xsd
-    (prefix).install "libxsd" => "opt"
+    # Copy files in libxsd/xsd folder of tarball into /usr/local/include/xsd
+    (include).install "libxsd/xsd"
   end
 
 end
