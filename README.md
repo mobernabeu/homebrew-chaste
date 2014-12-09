@@ -23,6 +23,13 @@ Use the following commands to tap and brew (advisable to `brew update` first):
 
 ```
 brew tap mobernabeu/chaste
+brew install --HEAD chaste -v
+```
+
+If you make local changes to the formula (i.e. editing `chaste.rb` or
+related files), you can brew from your local version with
+
+```
 brew install --HEAD chaste.rb -v
 ```
 
