@@ -19,6 +19,7 @@ class Chaste < Formula
   depends_on "parmetis" 
   depends_on "metis"
   depends_on "vtk5"
+  depends_on "sundials"
 
   patch do
     url "https://raw.githubusercontent.com/mobernabeu/homebrew-chaste/master/macosx.diff"
