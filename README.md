@@ -22,6 +22,8 @@ Work to date has focused on the latter.
 Use the following commands to tap and brew (advisable to `brew update` first):
 
 ```
+brew tap homebrew/versions
+brew tap homebrew/science
 brew tap mobernabeu/chaste
 brew install --HEAD chaste -v
 ```
