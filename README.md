@@ -4,7 +4,7 @@ homebrew-chaste
 Set of Homebrew formulas and related files required to install Chaste
 (http://www.cs.ox.ac.uk/chaste) on Mac OS X.
 
-This repo is currently work in progress.
+__This repo is currently work in progress and not officially supported by the Chaste project__
 
 There are two main use cases I envision for the Chaste formula:
 
