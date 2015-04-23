@@ -14,12 +14,10 @@ class Chaste < Formula
   depends_on "boost149"
   depends_on "scons"
   depends_on "xerces-c"
-  # PETSc build with HYPRE is currently broken (as of Homebrew 5c29c1e350fcc01ff16f6f5ece3764fce3ff8780)
-  depends_on "petsc"# => "with-hypre"
+  depends_on "petsc"
   depends_on "parmetis" 
   depends_on "metis"
   depends_on "vtk5"
-  depends_on "sundials" => ["with-mpi", "env=std"]
 
   patch do
     url "https://raw.githubusercontent.com/mobernabeu/homebrew-chaste/master/macosx.diff"
