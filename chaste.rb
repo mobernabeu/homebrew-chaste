@@ -21,7 +21,7 @@ class Chaste < Formula
 
   patch do
     url "https://raw.githubusercontent.com/mobernabeu/homebrew-chaste/master/macosx.diff"
-    sha1 "11305b0fcc77014548376900aa775b61ce2dbfd5"
+    sha1 "9f358fc71ef3f255932eb2cd04b3df752bbf2ca7"
   end
 
   def install
