@@ -16,8 +16,8 @@ index f1671d8..b72ba6f 100644
  
 -petsc_ver = 3.3
 -petsc_path='/usr/local/Cellar/petsc/3.3-p5/'
-+petsc_ver = 3.5
-+petsc_path='/usr/local/Cellar/petsc/3.5.3_2'
++petsc_ver = 3.6
++petsc_path='/usr/local/Cellar/petsc/3.6.1_4'
  petsc_build_name = ''
  petsc_build_name_profile = ''
  petsc_build_name_optimized = ''
